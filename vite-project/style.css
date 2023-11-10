@@ -57,6 +57,10 @@ a:hover {
   padding: 2rem
 }
 
+.card-img{
+  width:20%;
+  height:auto;
+}
 
 h1 {
   font-size: var(--h1);
