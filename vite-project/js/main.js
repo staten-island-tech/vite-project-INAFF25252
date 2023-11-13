@@ -22,16 +22,15 @@ const DOMSelectors = {
 //console.log(DOMSelectors.button) //can get specific element
 console.log(DOMSelectors);
 
-food.forEach((item)=> console.log(item));
-
-document.querySelector('#app').innerHTML = `
-    <h1>Cucumber Sushi</h1>
+food.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
-     <img src="./miso.jpg" alt="" class="card-img"><img>
-      <div class = "first"></div>
-      <div class = "last"></div>
-      <div class="age"></div>
-      </div>`
+     <img src = " alt="" class="card-img"><img>
+      <div class = "name"> ${item.name} </div>
+      <div class = "vegan">Vegan? ${item.vegan}</div>
+      <div class="type">${item.meal}</div>
+      <div class="price">${item.price}</div>
+      </div>`))
+
 
 setupCounter(document.querySelector('#counter'))
 
