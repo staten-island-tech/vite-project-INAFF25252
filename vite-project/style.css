@@ -17,6 +17,10 @@
 --primary: var(--light-purple);
 }
 
+.heading{
+background-color: #1a1a1a;
+padding: 20px;
+}
 body {
   background-color:var(--primary);
   margin: 0;
@@ -65,13 +69,6 @@ a:hover {
 h1 {
   font-size: var(--h1);
   line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 .logo {

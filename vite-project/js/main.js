@@ -1,6 +1,5 @@
 import '../style.css'
 import {food} from "./menu";
-
 console.log(food);
 
 const DOMSelectors = {
@@ -26,47 +25,112 @@ const DOMSelectors = {
   pointTwo:document.getElementById("pointTwo"), */
 };
 console.log(DOMSelectors)
+
 //console.log(DOMSelectors.points[0]); // this returns the first ever element in the document with class 'point'
 //console.log(DOMSelectors.button) //can get specific element
 DOMSelectors.form.addEventListener("click", function(event){
   event.preventDefault();
-DOMSelectors.form.innerHTML = ""
-food.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
+
+  function main(){
+    food.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+     <div class="card">
      <img src = " alt="" class="card-img"><img>
-      <div class = "name"> ${item.name} </div>
-      <div class = "vegan">Vegan? ${item.vegan}</div>
-      <div class="type">${item.meal}</div>
-      <div class="price">${item.price}</div>
-      </div>`))
+     <div class = "name"> ${item.name} </div>
+     <div class = "vegan">Vegan? ${item.vegan}</div>
+     <div class="type">${item.meal}</div>
+     <div class="price">${item.price}</div>
+     </div>`))}
+  main()
 })
+
 DOMSelectors.form1.addEventListener("click", function(event){
   event.preventDefault();
-DOMSelectors.form1.innerHTML = ""
 
-const SS = food.filter((items)=> {if(items.meal === "soup"){items.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-  <div class="card">
-   <img src = " alt="" class="card-img"><img>
+  function SS(){food.filter((items)=>items.meal === "soup" || items.meal === "salad").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    <div class="card">
+    <img src = " alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
     <div class = "vegan">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
-    </div>`))}},
-    console.log(SS)
-)})
-DOMSelectors.form3.addEventListener("click", function(event){
-  event.preventDefault();
-DOMSelectors.form3.innerHTML = ""
-
-  const vegan = food.filter((items)=> {return items.vegan === true}).forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-  <div class="card">
-   <img src = " alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))
-    console.log(vegan)
+    </div>`))}
+  SS()
 })
 
+DOMSelectors.form2.addEventListener("click", function(event){
+  event.preventDefault();
+  function app(){food.filter((items)=>items.meal === "appetizers").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    <div class="card">
+    <img src = " alt="" class="card-img"><img>
+    <div class = "name"> ${item.name} </div>
+    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class="type">${item.meal}</div>
+    <div class="price">${item.price}</div>
+    </div>`))}
+  app()
+})
 
+DOMSelectors.form3.addEventListener("click", function(event){
+  event.preventDefault();
+  function vegan(){food.filter((items)=> {return items.vegan === true}).forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    <div class="card">
+    <img src = " alt="" class="card-img"><img>
+    <div class = "name"> ${item.name} </div>
+    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class="type">${item.meal}</div>
+    <div class="price">${item.price}</div>
+    </div>`))}
+  vegan()
+})
+
+DOMSelectors.form4.addEventListener("click", function(event){
+  event.preventDefault();
+  function entree(){food.filter((items)=>items.meal === "entree").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    <div class="card">
+    <img src = " alt="" class="card-img"><img>
+    <div class = "name"> ${item.name} </div>
+    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class="type">${item.meal}</div>
+    <div class="price">${item.price}</div>
+    </div>`))}
+  entree()
+})
+
+DOMSelectors.form5.addEventListener("click", function(event){
+  event.preventDefault();
+  function sushi(){food.filter((items)=>items.meal === "sushi").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    <div class="card">
+    <img src = " alt="" class="card-img"><img>
+    <div class = "name"> ${item.name} </div>
+    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class="type">${item.meal}</div>
+    <div class="price">${item.price}</div>
+    </div>`))}
+  sushi()
+})
+
+DOMSelectors.form6.addEventListener("click", function(event){
+  event.preventDefault();
+  function dessert(){food.filter((items)=>items.meal === "dessert").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    <div class="card">
+    <img src = " alt="" class="card-img"><img>
+    <div class = "name"> ${item.name} </div>
+    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class="type">${item.meal}</div>
+    <div class="price">${item.price}</div>
+    </div>`))}
+  dessert()
+})
+
+DOMSelectors.form7.addEventListener("click", function(event){
+  event.preventDefault();
+  function drinks(){food.filter((items)=>items.meal === "drink").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    <div class="card">
+    <img src = " alt="" class="card-img"><img>
+    <div class = "name"> ${item.name} </div>
+    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class="type">${item.meal}</div>
+    <div class="price">${item.price}</div>
+    </div>`))}
+  drinks()
+})
