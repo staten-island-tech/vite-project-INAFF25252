@@ -24,12 +24,21 @@ padding: 20px;
 body {
   background-color:var(--primary);
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
-
+form{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+button{
+  text-align: center;
+  margin:2%;
+  display: inline-block;
+  align-items: center;
+}
 
 a {
   font-weight: 500;
@@ -59,10 +68,12 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2rem
+  
 }
 
 .card-img{
-  object-fit: contain;
+  object-fit: cover;
+  overflow: hidden;
   width:100%;
   height: auto;
 }
