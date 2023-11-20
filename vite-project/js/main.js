@@ -4,7 +4,6 @@ console.log(food);
 
 const DOMSelectors = {
   card: document.querySelector(".card"),
-  
   form1: document.querySelector(".SS"),
   form2: document.querySelector(".App"),
   form3: document.querySelector(".Vegan"),
