@@ -12,9 +12,10 @@ const DOMSelectors = {
   form6: document.querySelector(".Dessert"),
   form7: document.querySelector(".Drink"),
   form: document.querySelector(".Main"),
-  h2: document.querySelectorAll(".first"),
-  h2last:document.querySelectorAll(".last"),
-  h3:document.querySelectorAll(".age"),
+  h:document.querySelectorAll(".price"),
+  h2: document.querySelectorAll(".name"),
+  h3:document.querySelectorAll(".type"),
+  h4:document.querySelectorAll(".veganornot"),
   img: document.querySelectorAll(".card-img"),
   gallery: document.querySelector(".flex-container"),
   button:document.getElementById("#btn"),
@@ -41,7 +42,7 @@ DOMSelectors.form.addEventListener("click", function(event){
      <div class="card">
      <img src = "${item.img}" alt="" class="card-img"><img>
      <div class = "name"> ${item.name} </div>
-     <div class = "vegan">Vegan? ${item.vegan}</div>
+     <div class = "veganornot">Vegan? ${item.vegan}</div>
      <div class="type">${item.meal}</div>
      <div class="price">${item.price}</div>
      </div>`))}
@@ -55,7 +56,7 @@ DOMSelectors.form1.addEventListener("click", function(event){
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class = "veganornot">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
     </div>`))}
@@ -69,7 +70,7 @@ DOMSelectors.form2.addEventListener("click", function(event){
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class = "veganornot">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
     </div>`))}
@@ -83,7 +84,7 @@ DOMSelectors.form3.addEventListener("click", function(event){
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class = "veganornot">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
     </div>`))}
@@ -97,7 +98,7 @@ DOMSelectors.form4.addEventListener("click", function(event){
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class = "veganornot">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
     </div>`))}
@@ -111,7 +112,7 @@ DOMSelectors.form5.addEventListener("click", function(event){
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class = "veganornot">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
     </div>`))}
@@ -125,7 +126,7 @@ DOMSelectors.form6.addEventListener("click", function(event){
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class = "veganornot">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
     </div>`))}
@@ -139,7 +140,7 @@ DOMSelectors.form7.addEventListener("click", function(event){
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
-    <div class = "vegan">Vegan? ${item.vegan}</div>
+    <div class = "veganornot">Vegan? ${item.vegan}</div>
     <div class="type">${item.meal}</div>
     <div class="price">${item.price}</div>
     </div>`))}

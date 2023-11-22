@@ -21,6 +21,7 @@
 background-color: #1a1a1a;
 padding: 20px;
 }
+
 body {
   background-color:var(--primary);
   margin: 0;
@@ -40,6 +41,10 @@ button{
   align-items: center;
 }
 
+.name{
+  font-family: bold;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -49,8 +54,7 @@ a:hover {
   color: #535bf2;
 }
 .card {
-  border-radius:2%;
-  width: 30%;
+  width: 28%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -74,6 +78,16 @@ a:hover {
   
 }
 
+.type,.name,.veganornot,.price{
+  inset: auto auto 30px 30px;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: #f9f9f9;
+}
+
+
 .card-img{
   position: absolute;
   object-fit: cover;
@@ -81,8 +95,11 @@ a:hover {
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 0.9;
+  opacity: 0.8;
   transition: opacity .2s ease-out;
+}
+.card-img:hover{
+  opacity: 1;
 }
 
 h1 {
