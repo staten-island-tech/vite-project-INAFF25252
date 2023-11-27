@@ -37,8 +37,8 @@ function all(){
 DOMSelectors.form.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function main(){
-    food.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function main(arr){
+    arr.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
      <div class="card">
      <img src = "${item.img}" alt="" class="card-img"><img>
      <div class = "name"> ${item.name} </div>
@@ -52,7 +52,7 @@ DOMSelectors.form.addEventListener("click", function(event){
 DOMSelectors.form1.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function SS(){food.filter((items)=>items.meal === "soup" || items.meal === "salad").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function SS(arr){arr.filter((items)=>items.meal === "soup" || items.meal === "salad").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
@@ -66,7 +66,7 @@ DOMSelectors.form1.addEventListener("click", function(event){
 DOMSelectors.form2.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function app(){food.filter((items)=>items.meal === "appetizer").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function app(arr){arr.filter((items)=>items.meal === "appetizer").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
@@ -80,7 +80,7 @@ DOMSelectors.form2.addEventListener("click", function(event){
 DOMSelectors.form3.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function vegan(){food.filter((items)=> {return items.vegan === true}).forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function vegan(arr){arr.filter((items)=> {return items.vegan === true}).forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
@@ -94,7 +94,7 @@ DOMSelectors.form3.addEventListener("click", function(event){
 DOMSelectors.form4.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function entree(){food.filter((items)=>items.meal === "entree").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function entree(arr){arr.filter((items)=>items.meal === "entree").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
@@ -108,7 +108,7 @@ DOMSelectors.form4.addEventListener("click", function(event){
 DOMSelectors.form5.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function sushi(){food.filter((items)=>items.meal === "sushi").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function sushi(arr){arr.filter((items)=>items.meal === "sushi").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
@@ -122,7 +122,7 @@ DOMSelectors.form5.addEventListener("click", function(event){
 DOMSelectors.form6.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function dessert(){food.filter((items)=>items.meal === "dessert").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function dessert(arr){arr.filter((items)=>items.meal === "dessert").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
@@ -136,7 +136,7 @@ DOMSelectors.form6.addEventListener("click", function(event){
 DOMSelectors.form7.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function drinks(){food.filter((items)=>items.meal === "drink").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+  function drinks(arr){arr.filter((items)=>items.meal === "drink").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
     <div class="card">
     <img src = "${item.img}" alt="" class="card-img"><img>
     <div class = "name"> ${item.name} </div>
@@ -148,3 +148,13 @@ DOMSelectors.form7.addEventListener("click", function(event){
 })
 }
 all()
+/*function button(){ 
+  const normal= food.forEach((arr)=> arr)
+  const SS= 
+  const App=
+  const vegan=
+  const Entrees=
+  const sushi= arr.filter((items)=>items.meal === "sushi")
+  cons desserts=food.filter((items)=>items.meal === "dessert")
+  const drinks= food.filter((items)=>items.meal === "drink")
+}*/

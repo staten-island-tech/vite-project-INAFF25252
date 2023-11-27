@@ -1,14 +1,14 @@
 :root {
   --black: #000;
-  --light-blue: #2998ff;
-  --dark-blue: #135cc5;
-  --light-red: #f87171;
-  --dark-red: #dc2626;
+  --light-purple: #d3a6cf;
+  --light-green: #ccdad0;
+  --light-red: #f8baba;
+  --dark-red: #d46f6f;
   --gray: #252c30;
 
   /*Intentions */
-  --primary: var(--light-blue);
-  --secondary: var(--dark-blue);
+  --primary: var(--light-purple);
+  --secondary: var(--light-green);
 
   /*Typography */
   --h1: 7.594rem;
@@ -22,8 +22,16 @@
   --secondary: var(--dark-red);
 }
 .cool {
-  --primary: var(--light-blue);
-  --secondary: var(--dark-blue);
+  --primary: var(--light-purple);
+  --secondary: var(--light-green);
+}
+
+.hero {
+  background-color: var(--primary);
+}
+.main {
+  background-color: var(--secondary);
+  height: 90vh;
 }
 
 
