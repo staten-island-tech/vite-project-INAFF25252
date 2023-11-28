@@ -49,10 +49,20 @@ function theme(){
   DOMSelectors.theme.addEventListener("click", function(event){
   event.preventDefault
   document.body.classList.toggle("second")
-  document.button.classList.toggle("cool")
+  DOMSelectors.card.classList.toggle("cool")
 })
 }
 theme();
+
+
+function von(x){
+  if(x === true){
+    return "vegan"
+  }else{
+    return "not vegan"
+  }
+  }
+  von(filter.vegan.vegan)
 
 function all(btn,filter){
 btn.addEventListener("click", function(event){
@@ -60,12 +70,13 @@ btn.addEventListener("click", function(event){
   clear()
 
   function main(){
+    let string = von()
     filter.forEach((item)=>  
     DOMSelectors.gallery.insertAdjacentHTML("afterbegin", `
      <div class="card">
      <img src = "${item.img}" alt="" class="card-img"><img>
      <div class = "name"> ${item.name} </div>
-     <div class = "veganornot">Vegan? ${item.vegan}</div>
+     <div class = "veganornot">${string}</div>
      <div class="type">${item.meal}</div>
      <div class="price">${item.price}</div>
      </div>`))
