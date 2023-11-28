@@ -22,6 +22,7 @@ const DOMSelectors = {
   text:document.querySelector("#text"),
   empty:document.querySelector(".nothing"),
   pic:document.querySelector(".img"),
+  theme:document.querySelector(".theme")
   /* point:document.querySelectorAll(".point"), //gets all instances of this
   pointTwo:document.getElementById("pointTwo"), */
 };
@@ -42,6 +43,14 @@ const filter = {
   desserts: food.filter((des)=>des.meal === "dessert"),
   drinks: food.filter((drink)=>drink.meal === "drink"),
 }
+
+function theme(){
+  DOMSelectors.theme.addEventListener("click", function(event){
+  event.preventDefault
+  document.body.classList.toggle("second")
+})
+}
+theme();
 
 function all(btn,filter){
 btn.addEventListener("click", function(event){

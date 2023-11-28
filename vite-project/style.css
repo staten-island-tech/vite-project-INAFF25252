@@ -26,10 +26,10 @@
   --secondary: var(--light-green);
 }
 
-.hero {
+.main {
   background-color: var(--primary);
 }
-.main {
+.second {
   background-color: var(--secondary);
   height: 90vh;
 }
@@ -99,7 +99,7 @@ a:hover {
   
 }
 
-.type,.name,.veganornot,.price{
+.type,.name,.veganornot,.price,.theme{
   inset: auto auto 30px 30px;
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
