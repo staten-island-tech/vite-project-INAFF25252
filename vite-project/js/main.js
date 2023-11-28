@@ -33,31 +33,33 @@ function clear() {
   DOMSelectors.gallery.innerHTML=''
 }
 
-function button(){ 
-  const SoupS = food.filter((items)=>items.meal === "soup" || items.meal === "salad")
-  const App = food.filter((items)=>items.meal === "appetizer")
-  const vegan = food.filter((items)=> {return items.vegan === true})
-  const Entrees = food.filter((items)=>items.meal === "entree")
-  const sushi = food.filter((items)=>items.meal === "sushi")
-  const desserts = food.filter((items)=>items.meal === "dessert")
-  const drinks = food.filter((items)=>items.meal === "drink")
+const filter = { 
+  SoupS: food.filter((ss)=>ss.meal === "soup" || ss.meal === "salad"),
+  App: food.filter((app)=>app.meal === "appetizer"),
+  vegan: food.filter((vegan)=> {return vegan.vegan === true}),
+  Entrees: food.filter((ent)=>ent.meal === "entree"),
+  sushi: food.filter((sushi)=>sushi.meal === "sushi"),
+  desserts: food.filter((des)=>des.meal === "dessert"),
+  drinks: food.filter((drink)=>drink.meal === "drink"),
 }
 
-button();
-
 function all(btn,filter){
-DOMSelectors.form.addEventListener("click", function(event){
+btn.addEventListener("click", function(event){
   event.preventDefault();
   clear()
-  function main(arr){arr.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+
+  function main(){
+    filter.forEach((item)=>  
+    DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
      <div class="card">
      <img src = "${item.img}" alt="" class="card-img"><img>
      <div class = "name"> ${item.name} </div>
      <div class = "veganornot">Vegan? ${item.vegan}</div>
      <div class="type">${item.meal}</div>
      <div class="price">${item.price}</div>
-     </div>`))}
-  main()
+     </div>`))
+    }
+  main();
 })
 }
 
@@ -68,125 +70,5 @@ all(DOMSelectors.form3,filter.vegan)
 all(DOMSelectors.form4,filter.Entrees)
 all(DOMSelectors.form5,filter.sushi)
 all(DOMSelectors.form6,filter.desserts)
-all(DOMSelectors.form7,filter.drink)
+all(DOMSelectors.form7,filter.drinks)
 
-
-
-
-
-/*
-function all(){
-DOMSelectors.form.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function main(arr){
-    arr.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-     <div class="card">
-     <img src = "${item.img}" alt="" class="card-img"><img>
-     <div class = "name"> ${item.name} </div>
-     <div class = "veganornot">Vegan? ${item.vegan}</div>
-     <div class="type">${item.meal}</div>
-     <div class="price">${item.price}</div>
-     </div>`))}
-  main()
-})
-
-DOMSelectors.form1.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function SS(arr){arr.filter((items)=>items.meal === "soup" || items.meal === "salad").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
-    <img src = "${item.img}" alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "veganornot">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))}
-  SS()
-})
-
-DOMSelectors.form2.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function app(arr){arr.filter((items)=>items.meal === "appetizer").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
-    <img src = "${item.img}" alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "veganornot">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))}
-  app()
-})
-
-DOMSelectors.form3.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function vegan(arr){arr.filter((items)=> {return items.vegan === true}).forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
-    <img src = "${item.img}" alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "veganornot">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))}
-  vegan()
-})
-
-DOMSelectors.form4.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function entree(arr){arr.filter((items)=>items.meal === "entree").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
-    <img src = "${item.img}" alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "veganornot">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))}
-  entree()
-})
-
-DOMSelectors.form5.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function sushi(arr){arr.filter((items)=>items.meal === "sushi").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
-    <img src = "${item.img}" alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "veganornot">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))}
-  sushi()
-})
-
-DOMSelectors.form6.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function dessert(arr){arr.filter((items)=>items.meal === "dessert").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
-    <img src = "${item.img}" alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "veganornot">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))}
-  dessert()
-})
-
-DOMSelectors.form7.addEventListener("click", function(event){
-  event.preventDefault();
-  clear()
-  function drinks(arr){arr.filter((items)=>items.meal === "drink").forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
-    <div class="card">
-    <img src = "${item.img}" alt="" class="card-img"><img>
-    <div class = "name"> ${item.name} </div>
-    <div class = "veganornot">Vegan? ${item.vegan}</div>
-    <div class="type">${item.meal}</div>
-    <div class="price">${item.price}</div>
-    </div>`))}
-  drinks()
-})
-}
-all()*/
