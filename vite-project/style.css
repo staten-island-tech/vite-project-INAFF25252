@@ -11,11 +11,9 @@
   --secondary: var(--light-green);
 
   /*Typography */
-  --h1: 7.594rem;
-  --h2: 5.063rem;
-  --h3: 3.375rem;
-  --h4: 2.25rem;
-  --h5: 1.5rem;
+  --h2: 3.375rem;
+  --h3: 2.25rem;
+  --h4: 1.5rem;
 }
 .warm {
   --primary: var(--light-red);
@@ -47,6 +45,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
 form{
   display: flex;
   justify-content: space-around;
@@ -57,20 +56,33 @@ button{
   margin:2%;
   display: inline-block;
   align-items: center;
-}
-
-.name{
-  font-family: bold;
-}
-
-a {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
-a:hover {
-  color: #535bf2;
+
+button:hover {
+  border-color: black;
 }
+
+button:focus, button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem
+  
+}
+
 .card {
   width: 28%;
   height: auto;
@@ -91,23 +103,6 @@ a:hover {
   position: relative;
 }
 
-.flex-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 2rem
-  
-}
-
-.type,.name,.veganornot,.price,.theme{
-  inset: auto auto 30px 30px;
-  margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: normal;
-  text-transform: uppercase;
-  background-color: #f9f9f9;
-}
-
 
 .card-img{
   position: absolute;
@@ -123,28 +118,11 @@ a:hover {
   opacity: 1;
 }
 
-h1 {
-  font-size: var(--h1);
+.name,.veganornot,.type,.price {
+  font-size: var(--h3);
   line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: black;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: white;
+  text-align:center;
 }
 
 @media (prefers-color-scheme: light) {

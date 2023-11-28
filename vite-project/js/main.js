@@ -12,10 +12,11 @@ const DOMSelectors = {
   form6: document.querySelector(".Dessert"),
   form7: document.querySelector(".Drink"),
   form: document.querySelector(".Main"),
-  h:document.querySelectorAll(".price"),
+  h1:document.querySelectorAll(".null"),
   h2: document.querySelectorAll(".name"),
   h3:document.querySelectorAll(".type"),
   h4:document.querySelectorAll(".veganornot"),
+  h5:document.querySelectorAll(".price"),
   img: document.querySelectorAll(".card-img"),
   gallery: document.querySelector(".flex-container"),
   button:document.getElementById("#btn"),
@@ -48,6 +49,7 @@ function theme(){
   DOMSelectors.theme.addEventListener("click", function(event){
   event.preventDefault
   document.body.classList.toggle("second")
+  document.button.classList.toggle("cool")
 })
 }
 theme();
@@ -59,7 +61,7 @@ btn.addEventListener("click", function(event){
 
   function main(){
     filter.forEach((item)=>  
-    DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+    DOMSelectors.gallery.insertAdjacentHTML("afterbegin", `
      <div class="card">
      <img src = "${item.img}" alt="" class="card-img"><img>
      <div class = "name"> ${item.name} </div>
