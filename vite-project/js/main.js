@@ -33,6 +33,48 @@ function clear() {
   DOMSelectors.gallery.innerHTML=''
 }
 
+function button(){ 
+  const SoupS = food.filter((items)=>items.meal === "soup" || items.meal === "salad")
+  const App = food.filter((items)=>items.meal === "appetizer")
+  const vegan = food.filter((items)=> {return items.vegan === true})
+  const Entrees = food.filter((items)=>items.meal === "entree")
+  const sushi = food.filter((items)=>items.meal === "sushi")
+  const desserts = food.filter((items)=>items.meal === "dessert")
+  const drinks = food.filter((items)=>items.meal === "drink")
+}
+
+button();
+
+function all(btn,filter){
+DOMSelectors.form.addEventListener("click", function(event){
+  event.preventDefault();
+  clear()
+  function main(arr){arr.forEach((item)=>  DOMSelectors.gallery.insertAdjacentHTML("beforeend", `
+     <div class="card">
+     <img src = "${item.img}" alt="" class="card-img"><img>
+     <div class = "name"> ${item.name} </div>
+     <div class = "veganornot">Vegan? ${item.vegan}</div>
+     <div class="type">${item.meal}</div>
+     <div class="price">${item.price}</div>
+     </div>`))}
+  main()
+})
+}
+
+all(DOMSelectors.form,food)
+all(DOMSelectors.form1,filter.SoupS)
+all(DOMSelectors.form2,filter.App)
+all(DOMSelectors.form3,filter.vegan)
+all(DOMSelectors.form4,filter.Entrees)
+all(DOMSelectors.form5,filter.sushi)
+all(DOMSelectors.form6,filter.desserts)
+all(DOMSelectors.form7,filter.drink)
+
+
+
+
+
+/*
 function all(){
 DOMSelectors.form.addEventListener("click", function(event){
   event.preventDefault();
@@ -147,14 +189,4 @@ DOMSelectors.form7.addEventListener("click", function(event){
   drinks()
 })
 }
-all()
-/*function button(){ 
-  const normal= food.forEach((arr)=> arr)
-  const SS= 
-  const App=
-  const vegan=
-  const Entrees=
-  const sushi= arr.filter((items)=>items.meal === "sushi")
-  cons desserts=food.filter((items)=>items.meal === "dessert")
-  const drinks= food.filter((items)=>items.meal === "drink")
-}*/
+all()*/
