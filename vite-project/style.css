@@ -5,11 +5,8 @@
   --light-red: #f8baba;
   --dark-red: #d46f6f;
   --gray: #252c30;
-
-  /*Intentions */
   --primary: var(--light-purple);
   --secondary: var(--light-green);
-
   /*Typography */
   --h2: 3.375rem;
   --h3: 2.25rem;
