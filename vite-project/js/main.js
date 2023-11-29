@@ -48,9 +48,19 @@ const filter = {
 function theme(){
   DOMSelectors.theme.addEventListener("click", function(event){
   event.preventDefault
-  document.body.classList.toggle("second")
-  DOMSelectors.card.classList.toggle("cool")
+  if (document.body.classList.contains("cool")) {
+    document.body.classList.add("warm");
+    document.body.classList.remove("cool")
+    document.body.classList.toggle("main");
+    DOMSelectors.card.classList.toggle("second");
+  } else {
+    document.body.classList.add("cool");
+    document.body.classList.remove("warm")
+    document.body.classList.toggle("main");
+    DOMSelectors.card.classList.toggle("second");
+  }
 })
+
 }
 theme();
 
@@ -84,6 +94,7 @@ btn.addEventListener("click", function(event){
   main();
 })
 }
+
 
 all(DOMSelectors.form,food)
 all(DOMSelectors.form1,filter.SoupS)
