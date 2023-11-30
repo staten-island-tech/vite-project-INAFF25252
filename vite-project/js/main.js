@@ -57,7 +57,7 @@ function theme(){
     document.body.classList.add("cool");
     document.body.classList.remove("warm")
     document.body.classList.toggle("main");
-    DOMSelectors.card.classList.toggle("second");
+    DOMSelectors.card.classList.add("second");
   }
 })
 
@@ -104,4 +104,3 @@ all(DOMSelectors.form4,filter.Entrees)
 all(DOMSelectors.form5,filter.sushi)
 all(DOMSelectors.form6,filter.desserts)
 all(DOMSelectors.form7,filter.drinks)
-
