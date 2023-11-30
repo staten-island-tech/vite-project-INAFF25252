@@ -52,7 +52,7 @@ function theme(){
     document.body.classList.add("warm");
     document.body.classList.remove("cool")
     document.body.classList.toggle("main");
-    DOMSelectors.card.classList.toggle("second");
+    DOMSelectors.card.classList.add("second");
   } else {
     document.body.classList.add("cool");
     document.body.classList.remove("warm")
