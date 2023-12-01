@@ -5,6 +5,10 @@
   --light-red: #f8baba;
   --dark-red: #ff7070;
   --gray: #252c30;
+  --primary: var(--light-red);
+  --secondary: var(--dark-red);
+  --primary: var(--light-purple);
+  --secondary: var(--light-green);
   /*Typography */
   --h2: 3.375rem;
   --h3: 2.25rem;
@@ -34,6 +38,7 @@ padding: 20px;
 
 body {
   background-color:var(--primary);
+  background-color:var(--secondary);
   margin: 0;
   place-items: center;
   min-width: 320px;
@@ -96,6 +101,9 @@ button:focus, button:focus-visible {
   cursor: pointer;
   position: relative;
   border-radius: 1rem;
+  background-color:var(--primary);
+  background-color:var(--secondary);
+  
 }
 
 

@@ -51,13 +51,13 @@ function theme(){
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
     document.body.classList.remove("cool")
-    document.body.classList.toggle("main");
-    DOMSelectors.card.classList.add("second");
+    document.body.classList.add("main");
+    DOMSelectors.card.classList.toggle("second");
   } else {
     document.body.classList.add("cool");
     document.body.classList.remove("warm")
-    document.body.classList.toggle("main");
-    DOMSelectors.card.classList.add("second");
+    document.body.classList.add("main");
+    DOMSelectors.card.classList.toggle("second");
   }
 })
 
