@@ -12,7 +12,6 @@ const DOMSelectors = {
   form6: document.querySelector(".Dessert"),
   form7: document.querySelector(".Drink"),
   form: document.querySelector(".Main"),
-  h1:document.querySelectorAll(".null"),
   h2: document.querySelectorAll(".name"),
   h3:document.querySelectorAll(".type"),
   h4:document.querySelectorAll(".veganornot"),

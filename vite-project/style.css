@@ -1,6 +1,6 @@
 :root {
   --black: #000;
-  --light-purple: #d3a6cf;
+  --light: #fafafa;
   --light-green: #ccdad0;
   --light-red: #f8baba;
   --dark-red: #ff7070;
@@ -10,6 +10,7 @@
   --primary: var(--light-purple);
   --secondary: var(--light-green);
   /*Typography */
+  --h1: 4rem;
   --h2: 3.375rem;
   --h3: 2.25rem;
   --h4: 1.5rem;
@@ -19,7 +20,7 @@
   --secondary: var(--dark-red);
 }
 .cool {
-  --primary: var(--light-purple);
+  --primary: var(--light);
   --secondary: var(--light-green);
 }
 
@@ -28,12 +29,6 @@
 }
 .second {
   background-color: var(--secondary);
-}
-
-
-.heading{
-background-color: #1a1a1a;
-padding: 20px;
 }
 
 body {
@@ -64,7 +59,7 @@ button{
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  background-color: white;
+  background-color: var(--secondary);
 }
 
 button:hover {
@@ -101,7 +96,6 @@ button:focus, button:focus-visible {
   cursor: pointer;
   position: relative;
   border-radius: 1rem;
-  background-color:var(--primary);
   background-color:var(--secondary);
   
 }
@@ -126,6 +120,12 @@ button:focus, button:focus-visible {
   line-height: 1.1;
   background-color: white;
   text-align:center;
+}
+h1{
+  text-align:center;
+  font-size:var(--h1);
+  background-color:var(--secondary);;
+  margin-top:0;
 }
 
 @media (prefers-color-scheme: light) {
