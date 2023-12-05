@@ -22,7 +22,7 @@ const food = [
     { name: "Thai Iced Tea", price: 5.99, meal: "drink", vegan: false, img: "/thai-iced.jpg"},   
     { name: "Crepe Cake", price: 8.99, meal: "dessert", vegan: false, img: "/crepe.jpg"}, 
     { name: "Ice Cream", price: 4.99, meal: "dessert", vegan: false, img: "/matcha-iced-cream.webp"},
-    { name: "Oreo Donut", price: 6.99, meal: "dessert", vegan: false, img: "/bubble-tea.jpg"},  
+    { name: "Oreo Donut", price: 6.99, meal: "dessert", vegan: false, img: "/oreo-donut.jpg"},  
     { name: "Pork Dumplings", price: 7.99, meal: "appetizer", vegan: false, img: "/pork-dumplings.jpg"},
     { name: "Spicy Kani Salad", price: 4.99, meal: "salad", vegan: false, img: "/spicy_kani_salad.jpg"},
     { name: "Veggie Dumplings", price: 7.99, meal: "appetizer", vegan: true, img: "/veggie-dumpling.jpeg"},
