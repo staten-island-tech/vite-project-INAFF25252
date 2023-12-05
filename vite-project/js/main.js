@@ -12,6 +12,7 @@ const DOMSelectors = {
   form6: document.querySelector(".Dessert"),
   form7: document.querySelector(".Drink"),
   form: document.querySelector(".Main"),
+  h1:document.querySelectorAll("h1"),
   h2: document.querySelectorAll(".name"),
   h3:document.querySelectorAll(".type"),
   h4:document.querySelectorAll(".veganornot"),
@@ -51,11 +52,13 @@ function theme(){
     document.body.classList.add("warm");
     document.body.classList.remove("cool")
     document.body.classList.add("main");
+    document.h1.classList.add("second");
     DOMSelectors.card.classList.toggle("second");
   } else {
     document.body.classList.add("cool");
     document.body.classList.remove("warm")
     document.body.classList.add("main");
+    document.h1.classList.add("second");
     DOMSelectors.card.classList.toggle("second");
   }
 })
