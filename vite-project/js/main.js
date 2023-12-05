@@ -67,11 +67,11 @@ theme();
 function von(x){
   if(x === true){
     return "vegan"
-  }else{
+  }else if(x===false){
     return "not vegan"
   }
   }
-  von(filter.vegan.vegan)
+
 
 function all(btn,filter){
 btn.addEventListener("click", function(event){
@@ -79,8 +79,8 @@ btn.addEventListener("click", function(event){
   clear()
 
   function main(){
-    let string = von()
-    filter.forEach((item)=>  
+    filter.forEach((item)=>  {
+      const string = von(item.vegan)
     DOMSelectors.gallery.insertAdjacentHTML("afterbegin", `
      <div class="card">
      <img src = "${item.img}" alt="" class="card-img"><img>
@@ -88,7 +88,7 @@ btn.addEventListener("click", function(event){
      <div class = "veganornot">${string}</div>
      <div class="type">${item.meal}</div>
      <div class="price">${item.price}</div>
-     </div>`))
+     </div>`)})
     }
   main();
 })
