@@ -66,7 +66,6 @@ function theme(){
 }
 theme();
 
-
 function von(x){
   if(x === true){
     return "vegan"
@@ -74,7 +73,6 @@ function von(x){
     return "not vegan"
   }
   }
-
 
 function all(btn,filter){
 btn.addEventListener("click", function(event){
@@ -97,7 +95,6 @@ btn.addEventListener("click", function(event){
 })
 }
 
-
 all(DOMSelectors.form,food)
 all(DOMSelectors.form1,filter.SoupS)
 all(DOMSelectors.form2,filter.App)
@@ -106,3 +103,5 @@ all(DOMSelectors.form4,filter.Entrees)
 all(DOMSelectors.form5,filter.sushi)
 all(DOMSelectors.form6,filter.desserts)
 all(DOMSelectors.form7,filter.drinks)
+
+//my code used to have a event listener for every button, I changed it before he said to keep old code in comments.
