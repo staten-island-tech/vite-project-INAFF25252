@@ -7,7 +7,7 @@
   --gray: #252c30;
   --primary: var(--light-red);
   --secondary: var(--dark-red);
-  --primary: var(--light-purple);
+  --primary: var(--light);
   --secondary: var(--light-green);
   /*Typography */
   --h1: 4rem;
